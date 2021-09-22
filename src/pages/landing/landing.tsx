@@ -1,12 +1,14 @@
-import React, { FC } from "react";
-import Loading from "components/shared/Loading";
+import { FC } from "react";
 
 const Landing: FC = () => {
   return (
     <div>
       <div className="flex flex-col items-center text-center">
-        <Loading />
-        <h1 className="mt-6">Homepage</h1>
+        <div className="bg-mountains w-full h-[1271px]">
+          <h1 className="mt-6 text-black text-4xl font-light">
+            Welcome to Midvale.
+          </h1>
+        </div>
       </div>
     </div>
   );

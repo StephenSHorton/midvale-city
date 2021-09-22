@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Route, Switch } from "react-router-dom";
 import { ToastContainer, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,8 +9,8 @@ import Landing from "pages/landing/landing";
 
 const App: FC = () => {
   return (
-    <div className="flex justify-center App">
-      <div className="center-content">
+    <div className="flex justify-center App bg-midvale-blue text-white">
+      <div className="w-3/4 xl:w-2/3 sm:w-full">
         <ToastContainer
           position="top-center"
           autoClose={5000}
@@ -23,7 +23,7 @@ const App: FC = () => {
           style={{ fontWeight: "bolder" }}
         />
         <Navbar />
-        <div className="w-full min-h-screen mt-20">
+        <div className="w-full">
           <Switch>
             <Route exact path={Routes.landing} component={Landing} />
           </Switch>

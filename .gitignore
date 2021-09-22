@@ -17,10 +17,13 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.firebase/*
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+firebase-debug.log*
+firebase-error.log*
 
 # Tailwind gets generated every build
 /src/styles/tailwind.css

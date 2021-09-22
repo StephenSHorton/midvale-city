@@ -7,10 +7,6 @@
     @apply bg-white;
   }
 
-  .center-content {
-    @apply w-3/4 xl:w-2/3 sm:w-full;
-  }
-
   /* Buttons */
   .btn-primary {
     @apply flex items-center px-6 py-1 text-base font-bold text-white transition duration-200 ease-in-out transform bg-blue-500 rounded-md hover:bg-blue-400 hover:scale-105;
