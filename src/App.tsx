@@ -9,8 +9,8 @@ import Landing from "pages/landing/landing";
 
 const App: FC = () => {
   return (
-    <div className="flex justify-center App bg-midvale-blue text-white">
-      <div className="w-3/4 xl:w-2/3 sm:w-full">
+    <div className="flex justify-center text-white App bg-midvale-blue">
+      <div className="w-full md:w-3/4 xl:w-2/3">
         <ToastContainer
           position="top-center"
           autoClose={5000}
