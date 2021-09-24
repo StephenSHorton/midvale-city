@@ -21,12 +21,12 @@ const Section1: FC = () => {
           </div>
         </div>
       </div>
-      <h2 className="p-6 my-6 text-2xl font-light text-center shadow-2xl md:text-4xl">
+      <h2 className="p-6 my-6 text-2xl font-light text-center bg-white shadow-2xl md:text-4xl bg-opacity-20">
         <strong>Ranked-Choice</strong> voting allows voters to vote their
         preference
       </h2>
       <p></p>
-      <div className="p-6 bg-transparent shadow-2xl">
+      <div className="p-6 bg-white shadow-2xl bg-opacity-20">
         <iframe
           className="w-[400px] h-[245px] xl:w-[1280px] xl:h-[720px]"
           src="https://www.youtube.com/embed/TIVFxAB3LV8"
