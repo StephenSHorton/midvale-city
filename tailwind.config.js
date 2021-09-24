@@ -13,6 +13,7 @@ module.exports = {
       },
       backgroundImage: {
         mountains: "url(/src/assets/images/mountains.jpg)", //1920x1271
+        paper: "url(/src/assets/images/paper.jpg)", //1920x1440
       },
     },
   },

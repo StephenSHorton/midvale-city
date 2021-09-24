@@ -1,4 +1,6 @@
-const Section1 = () => {
+import { FC } from "react";
+
+const Section1: FC = () => {
   return (
     <div className="bg-mountains w-full h-[1271px] flex flex-col items-center text-black">
       <div className="place-self-start">

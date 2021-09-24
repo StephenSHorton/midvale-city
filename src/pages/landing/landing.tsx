@@ -1,11 +1,13 @@
 import { FC } from "react";
 import Section1 from "./sections/Section1";
+import Section2 from "./sections/Section2";
 
 const Landing: FC = () => {
   return (
-    <div>
+    <>
       <Section1 />
-    </div>
+      <Section2 />
+    </>
   );
 };
 
