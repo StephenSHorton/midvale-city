@@ -12,28 +12,28 @@ const PracticeRanking: FC = () => {
   );
   const candidates: Candidate[] = [
     {
-      name: "Henry Ford",
+      name: "Apple",
     },
     {
-      name: "John Deere",
+      name: "Banana",
     },
     {
-      name: "Michael Scott",
+      name: "Grapes",
     },
     {
-      name: "Gordon Ramsey",
+      name: "Kiwi",
     },
     {
-      name: "Jimmy Neutron",
+      name: "Orange",
     },
     {
-      name: "Extra Candidate 1",
+      name: "Pomegranate",
     },
     {
-      name: "Extra Candidate 2",
+      name: "Strawberry",
     },
     {
-      name: "Extra Candidate 3",
+      name: "Watermelon",
     },
   ];
 
@@ -69,8 +69,8 @@ const PracticeRanking: FC = () => {
   }
 
   return (
-    <div className="p-4 bg-gray-300 border-4 rounded-lg border-midvale-red">
-      <table className="bg-gray-200 rounded-lg">
+    <div className="p-4 border-4 rounded-lg bg-midvale-white border-midvale-red">
+      <table className="rounded-lg bg-midvale-white">
         <thead>
           <tr className="border-b-2 border-midvale-red">
             <th className="flex flex-col items-start justify-center p-4 pr-24">
@@ -91,13 +91,13 @@ const PracticeRanking: FC = () => {
             return (
               <tr key={index}>
                 <td className="py-8 pl-4">
-                  <span className="px-4 py-2 border-2 rounded-md bg-gray-50 border-midvale-red">
+                  <span className="px-4 py-2 bg-gray-100 border-2 rounded-md border-midvale-red">
                     {candidate.name}
                   </span>
                 </td>
                 {new Array(5).fill(undefined).map((_, index2) => (
                   <td>
-                    <div className="flex items-center justify-center p-2 border-b-2 border-midvale-red bg-gray-50">
+                    <div className="flex items-center justify-center p-2 bg-gray-100 border-b-2 border-midvale-red">
                       <input
                         className="w-[20px] h-[20px]"
                         type="checkbox"
@@ -121,15 +121,15 @@ const PracticeRanking: FC = () => {
           Reset
         </button>
       </div>
-      <div className="flex flex-col rounded-md p-4border-2 border-midvale-blue">
-        <h2 className="px-2 py-1 font-semibold bg-gray-200 border-2 rounded-md border-midvale-blue">
+      <div className="flex flex-col p-4 border-2 rounded-md border-midvale-blue">
+        <h2 className="px-2 py-1 font-semibold bg-gray-100 border-2 rounded-md border-midvale-blue">
           Results:
         </h2>
         <ul className="mt-4">
           {rankedCandidates.map((name, index) => (
             <li key={index} className="my-2 rounded-md">
               <div className="flex">
-                <div className="w-10 px-1 mr-8 text-center bg-gray-200 border-2 rounded-md border-midvale-blue">
+                <div className="w-10 px-1 mr-8 text-center bg-gray-100 border-2 rounded-md border-midvale-blue">
                   {stringRanks[index]}
                 </div>
                 <div>{name}</div>

@@ -10,10 +10,12 @@ module.exports = {
       colors: {
         "midvale-red": "#8C203C",
         "midvale-blue": "#13294B",
+        "midvale-white": "#FBFCFE",
       },
       backgroundImage: {
         mountains: "url(/src/assets/images/mountains.jpg)", //1920x1271
         paper: "url(/src/assets/images/paper.jpg)", //1920x1440
+        strawberries: "url(/src/assets/images/strawberries.jpg)", //1920x706
       },
     },
   },
