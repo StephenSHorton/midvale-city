@@ -16,6 +16,7 @@ module.exports = {
         mountains: "url(/src/assets/images/mountains.jpg)", //1920x1271
         paper: "url(/src/assets/images/paper.jpg)", //1920x1440
         strawberries: "url(/src/assets/images/strawberries.jpg)", //1920x706
+        "box-papers": "url(/src/assets/images/box_papers.jpg)", //1920x1221
       },
     },
   },

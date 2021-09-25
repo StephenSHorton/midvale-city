@@ -137,6 +137,17 @@ const PracticeRanking: FC = () => {
             </li>
           ))}
         </ul>
+        {rankedCandidates.filter((name) => name !== "").length === 5 ? (
+          <div className="flex space-x-2 text-red-600">
+            {candidates
+              .filter((candidate) => !rankedCandidates.includes(candidate.name))
+              .map((candidate, index) => (
+                <p key={index} className="">
+                  <s>{candidate.name}</s>
+                </p>
+              ))}
+          </div>
+        ) : null}
       </div>
     </div>
   );

@@ -23,9 +23,9 @@ const BottomBar = () => {
         </a>
       </div>
       <div className="flex my-2">
-        <FacebookIcon />
-        <InstagramIcon />
-        <TwitterIcon />
+        <a href="https://twitter.com/midvalecity" rel="noreferrer">
+          <TwitterIcon />
+        </a>
       </div>
     </div>
   );

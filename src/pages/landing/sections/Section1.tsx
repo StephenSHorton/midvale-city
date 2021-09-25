@@ -22,7 +22,7 @@ const Section1: FC = () => {
         </div>
       </div>
       <h2 className="p-6 my-6 text-2xl font-light text-center bg-white shadow-2xl md:text-4xl bg-opacity-20">
-        <strong>Ranked-Choice</strong> voting allows voters to vote their
+        <strong>Ranked-Choice Voting</strong> allows voters to vote their
         preference
       </h2>
       <p></p>

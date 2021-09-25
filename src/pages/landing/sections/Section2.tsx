@@ -22,73 +22,73 @@ const Section2: FC = () => {
         <div className="absolute w-full transform -translate-x-1/2 border-l-8 border-r-8 border-midvale-red top-1/2 left-1/2 md:w-3/4">
           <Rerousel itemRef={itemRef} interval={5000}>
             <div className="flex" ref={itemRef}>
-              <div className="text-center">
+              <div className="text-center transition ease-in-out transform scale-90 duration-2000 hover:scale-100">
                 <img
                   className="w-[200px] rounded-full shadow-lg mx-6"
                   src={appleImg}
                   alt="candidate 1"
                 />
-                <p className="p-1 m-4 rounded-full shadow-lg">Apple</p>
+                <p className="p-1 m-4 rounded-full shadow-md">Apple</p>
               </div>
-              <div className="text-center">
+              <div className="text-center transition ease-in-out transform scale-90 duration-2000 hover:scale-100">
                 <img
                   className="w-[200px] rounded-full shadow-lg mx-6"
                   src={bananaImg}
                   alt="candidate 2"
                 />
-                <p className="p-1 m-4 rounded-full shadow-lg">Banana</p>
+                <p className="p-1 m-4 rounded-full shadow-md">Banana</p>
               </div>
-              <div className="text-center">
+              <div className="text-center transition ease-in-out transform scale-90 duration-2000 hover:scale-100">
                 <img
                   className="w-[200px] rounded-full shadow-lg mx-6"
                   src={grapesImg}
                   alt="candidate 3"
                 />
-                <p className="p-1 m-4 rounded-full shadow-lg">Grapes</p>
+                <p className="p-1 m-4 rounded-full shadow-md">Grapes</p>
               </div>
             </div>
             <div className="flex" ref={itemRef}>
-              <div className="text-center">
+              <div className="text-center transition ease-in-out transform scale-90 duration-2000 hover:scale-100">
                 <img
                   className="w-[200px] rounded-full shadow-lg mx-6"
                   src={kiwiImg}
                   alt="candidate 4"
                 />
-                <p className="p-1 m-4 rounded-full shadow-lg">Kiwi</p>
+                <p className="p-1 m-4 rounded-full shadow-md">Kiwi</p>
               </div>
-              <div className="text-center">
+              <div className="text-center transition ease-in-out transform scale-90 duration-2000 hover:scale-100">
                 <img
                   className="w-[200px] rounded-full shadow-lg mx-6"
                   src={orangeImg}
                   alt="candidate 5"
                 />
-                <p className="p-1 m-4 rounded-full shadow-lg">Orange</p>
+                <p className="p-1 m-4 rounded-full shadow-md">Orange</p>
               </div>
-              <div className="text-center">
+              <div className="text-center transition ease-in-out transform scale-90 duration-2000 hover:scale-100">
                 <img
                   className="w-[200px] rounded-full shadow-lg mx-6"
                   src={pomegranateImg}
                   alt="candidate 6"
                 />
-                <p className="p-1 m-4 rounded-full shadow-lg">Pomegranate</p>
+                <p className="p-1 m-4 rounded-full shadow-md">Pomegranate</p>
               </div>
             </div>
             <div className="flex" ref={itemRef}>
-              <div className="text-center">
+              <div className="text-center transition ease-in-out transform scale-90 duration-2000 hover:scale-100">
                 <img
                   className="w-[200px] rounded-full shadow-lg mx-6"
                   src={strawberryImg}
                   alt="candidate 6"
                 />
-                <p className="p-1 m-4 rounded-full shadow-lg">Strawberry</p>
+                <p className="p-1 m-4 rounded-full shadow-md">Strawberry</p>
               </div>
-              <div className="text-center">
+              <div className="text-center transition ease-in-out transform scale-90 duration-2000 hover:scale-100">
                 <img
                   className="w-[200px] rounded-full shadow-lg mx-6"
                   src={watermelonImg}
                   alt="candidate 7"
                 />
-                <p className="p-1 m-4 rounded-full shadow-lg">Watermelon</p>
+                <p className="p-1 m-4 rounded-full shadow-md">Watermelon</p>
               </div>
             </div>
           </Rerousel>
