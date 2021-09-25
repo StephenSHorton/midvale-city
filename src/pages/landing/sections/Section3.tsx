@@ -113,7 +113,7 @@ type AccordionProps = {
 const Accordion: FC<AccordionProps> = ({ title, text }) => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <button className="w-2/3 mb-10 text-left shadow-lg group">
+      <button className="w-5/6 mb-10 text-left shadow-lg md:w-2/3 group">
         <div className="px-8 py-4 text-xl font-bold rounded-t-lg rounded-b-lg bg-midvale-blue group-focus:rounded-b-none group-focus:bg-midvale-red">
           {title}
         </div>

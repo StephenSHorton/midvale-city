@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Section1: FC = () => {
   return (
-    <div className="bg-mountains w-full h-[1271px] flex flex-col items-center text-black">
+    <div className="bg-mountains w-full md:h-[1271px] flex flex-col items-center text-black">
       <div className="place-self-start">
         <div className="font-extrabold text-white uppercase text-7xl">
           <div className="w-[275px] p-2 text-right bg-midvale-blue border-8 border-midvale-blue">
@@ -26,7 +26,7 @@ const Section1: FC = () => {
         preference
       </h2>
       <p></p>
-      <div className="p-6 bg-white shadow-2xl bg-opacity-20">
+      <div className="p-6 mb-10 bg-white shadow-2xl bg-opacity-20 md:mb-0">
         <iframe
           className="w-[400px] h-[245px] xl:w-[1280px] xl:h-[720px]"
           src="https://www.youtube.com/embed/TIVFxAB3LV8"

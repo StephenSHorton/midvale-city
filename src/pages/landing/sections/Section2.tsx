@@ -94,15 +94,14 @@ const Section2: FC = () => {
           </Rerousel>
         </div>
       </div>
-      <div className="relative bg-midvale-white w-full h-[1281px] flex flex-col items-center text-black">
+      <div className="relative flex flex-col items-center w-full text-black bg-midvale-white">
         <div>{/* Mock candidate carousel */}</div>
         <h1 className="self-start px-20 py-4 mt-10 text-2xl font-bold bg-white shadow-lg bg-opacity-20">
           Practice Ranking
         </h1>
-        <div className="absolute transform -translate-x-1/2 -translate-y-1/2 shadow-2xl top-1/2 left-1/2">
+        <div className="my-10 shadow-2xl scale-80 sm:scale-100">
           <PracticeRanking />
         </div>
-        <div>{/* Show results / clear responses */}</div>
       </div>
     </>
   );

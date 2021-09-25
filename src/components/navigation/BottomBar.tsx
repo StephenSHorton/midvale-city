@@ -4,7 +4,7 @@ import { WebsiteName } from "constants/website-info";
 const BottomBar = () => {
   return (
     <div className="flex flex-col items-center justify-center font-semibold bg-midvale-red">
-      <h1 className="text-2xl">{WebsiteName}</h1>
+      <h1 className="text-2xl font-extrabold tracking-wider">{WebsiteName}</h1>
       <div className="text-center">
         <p>
           7505 Holden st Midvale, UT 84047 | Phone (801) 567-7200 | Connecting

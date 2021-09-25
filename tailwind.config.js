@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
+        bold: "0 0 4px 4px rgba(0, 0, 0, 0.2)",
         "inner-lg": "inset 0 0 4px 4px rgba(0, 0, 0, 0.2)",
       },
       colors: {
@@ -17,6 +18,10 @@ module.exports = {
         paper: "url(/src/assets/images/paper.jpg)", //1920x1440
         strawberries: "url(/src/assets/images/strawberries.jpg)", //1920x706
         "box-papers": "url(/src/assets/images/box_papers.jpg)", //1920x1221
+      },
+      scale: {
+        80: ".80",
+        85: ".85",
       },
     },
   },

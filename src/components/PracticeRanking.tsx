@@ -1,7 +1,16 @@
 import { FC, useState } from "react";
+import appleImg from "assets/images/candidates/apple.jpg";
+import bananaImg from "assets/images/candidates/banana.jpg";
+import grapesImg from "assets/images/candidates/grapes.jpg";
+import kiwiImg from "assets/images/candidates/kiwi.jpg";
+import orangeImg from "assets/images/candidates/orange.jpg";
+import pomegranateImg from "assets/images/candidates/pomegranate.jpg";
+import watermelonImg from "assets/images/candidates/watermelon.jpg";
+import strawberryImg from "assets/images/candidates/strawberry.jpg";
 
 type Candidate = {
   name: string;
+  profileImg?: React.ReactElement;
 };
 
 const stringRanks = ["1st", "2nd", "3rd", "4th", "5th"];
@@ -13,27 +22,83 @@ const PracticeRanking: FC = () => {
   const candidates: Candidate[] = [
     {
       name: "Apple",
+      profileImg: (
+        <img
+          className="mx-6 rounded-full shadow-lg w-[25px]"
+          src={appleImg}
+          alt="apple"
+        />
+      ),
     },
     {
       name: "Banana",
+      profileImg: (
+        <img
+          className="mx-6 rounded-full shadow-lg w-[25px]"
+          src={bananaImg}
+          alt="banana"
+        />
+      ),
     },
     {
       name: "Grapes",
+      profileImg: (
+        <img
+          className="mx-6 rounded-full shadow-lg w-[25px]"
+          src={grapesImg}
+          alt="grapes"
+        />
+      ),
     },
     {
       name: "Kiwi",
+      profileImg: (
+        <img
+          className="mx-6 rounded-full shadow-lg w-[25px]"
+          src={kiwiImg}
+          alt="kiwi"
+        />
+      ),
     },
     {
       name: "Orange",
+      profileImg: (
+        <img
+          className="mx-6 rounded-full shadow-lg w-[25px]"
+          src={orangeImg}
+          alt="orange"
+        />
+      ),
     },
     {
       name: "Pomegranate",
+      profileImg: (
+        <img
+          className="mx-6 rounded-full shadow-lg w-[25px]"
+          src={pomegranateImg}
+          alt="pomwegranate"
+        />
+      ),
     },
     {
       name: "Strawberry",
+      profileImg: (
+        <img
+          className="mx-6 rounded-full shadow-lg w-[25px]"
+          src={strawberryImg}
+          alt="strawberry"
+        />
+      ),
     },
     {
       name: "Watermelon",
+      profileImg: (
+        <img
+          className="mx-6 rounded-full shadow-lg w-[25px]"
+          src={watermelonImg}
+          alt="watermelon"
+        />
+      ),
     },
   ];
 
@@ -90,10 +155,13 @@ const PracticeRanking: FC = () => {
           {candidates.map((candidate, index) => {
             return (
               <tr key={index}>
-                <td className="py-8 pl-4">
-                  <span className="px-4 py-2 bg-gray-100 border-2 rounded-md border-midvale-red">
-                    {candidate.name}
-                  </span>
+                <td className="pt-2">
+                  <div className="relative flex justify-between w-2/3 px-4 py-2 bg-gray-100 border-2 rounded-md border-midvale-red">
+                    <p>{candidate.name}</p>
+                    <div className="absolute -right-4">
+                      {candidate.profileImg}
+                    </div>
+                  </div>
                 </td>
                 {new Array(5).fill(undefined).map((_, index2) => (
                   <td>
