@@ -3,9 +3,13 @@ import { FC, useState } from "react";
 type Candidate = {
   name: string;
 };
-//TODO allow checked boxes to be unchecked (not just on refresh)
+
+const stringRanks = ["1st", "2nd", "3rd", "4th", "5th"];
+
 const PracticeRanking: FC = () => {
-  const [rankedCandidates, setRankedCandidates] = useState<string[]>([]);
+  const [rankedCandidates, setRankedCandidates] = useState<string[]>(
+    new Array(5).fill("")
+  );
   const candidates: Candidate[] = [
     {
       name: "Henry Ford",
@@ -35,8 +39,33 @@ const PracticeRanking: FC = () => {
 
   function rankCandidate(candidate: Candidate, index: number) {
     const temp = [...rankedCandidates];
+    if (temp[index] !== "") {
+      if (temp[index] === candidate.name) {
+        temp[index] = "";
+        setRankedCandidates(temp);
+        return;
+      } else {
+        temp[index] = candidate.name;
+        setRankedCandidates(temp);
+        return;
+      }
+    }
     temp[index] = candidate.name;
     setRankedCandidates(temp);
+  }
+
+  function isChecked(candidate: Candidate, index: number) {
+    return (
+      rankedCandidates[index] !== "" &&
+      rankedCandidates[index] === candidate.name
+    );
+  }
+
+  function isDisabled(candidate: Candidate, index: number) {
+    const candidateIndex = rankedCandidates.findIndex(
+      (el) => el === candidate.name
+    );
+    return candidateIndex >= 0 && index !== candidateIndex;
   }
 
   return (
@@ -66,76 +95,49 @@ const PracticeRanking: FC = () => {
                     {candidate.name}
                   </span>
                 </td>
-                <td>
-                  <div className="flex items-center justify-center p-2 border-b-2 border-midvale-red bg-gray-50">
-                    <input
-                      className="w-[20px] h-[20px]"
-                      type="checkbox"
-                      onChange={() => rankCandidate(candidate, 0)}
-                      disabled={
-                        rankedCandidates.find((el) => el === candidate.name) !==
-                          undefined || rankedCandidates[0] !== undefined
-                      }
-                    />
-                  </div>
-                </td>
-                <td>
-                  <div className="flex items-center justify-center p-2 border-b-2 border-midvale-red bg-gray-50">
-                    <input
-                      className="w-[20px] h-[20px]"
-                      type="checkbox"
-                      onChange={() => rankCandidate(candidate, 1)}
-                      disabled={
-                        rankedCandidates.find((el) => el === candidate.name) !==
-                          undefined || rankedCandidates[1] !== undefined
-                      }
-                    />
-                  </div>
-                </td>
-                <td>
-                  <div className="flex items-center justify-center p-2 border-b-2 border-midvale-red bg-gray-50">
-                    <input
-                      className="w-[20px] h-[20px]"
-                      type="checkbox"
-                      onChange={() => rankCandidate(candidate, 2)}
-                      disabled={
-                        rankedCandidates.find((el) => el === candidate.name) !==
-                          undefined || rankedCandidates[2] !== undefined
-                      }
-                    />
-                  </div>
-                </td>
-                <td>
-                  <div className="flex items-center justify-center p-2 border-b-2 border-midvale-red bg-gray-50">
-                    <input
-                      className="w-[20px] h-[20px]"
-                      type="checkbox"
-                      onChange={() => rankCandidate(candidate, 3)}
-                      disabled={
-                        rankedCandidates.find((el) => el === candidate.name) !==
-                          undefined || rankedCandidates[3] !== undefined
-                      }
-                    />
-                  </div>
-                </td>
-                <td>
-                  <div className="flex items-center justify-center p-2 border-b-2 border-midvale-red bg-gray-50">
-                    <input
-                      className="w-[20px] h-[20px]"
-                      type="checkbox"
-                      onChange={() => rankCandidate(candidate, 4)}
-                      disabled={
-                        rankedCandidates.find((el) => el === candidate.name) !==
-                          undefined || rankedCandidates[4] !== undefined
-                      }
-                    />
-                  </div>
-                </td>
+                {new Array(5).fill(undefined).map((_, index2) => (
+                  <td>
+                    <div className="flex items-center justify-center p-2 border-b-2 border-midvale-red bg-gray-50">
+                      <input
+                        className="w-[20px] h-[20px]"
+                        type="checkbox"
+                        checked={isChecked(candidate, index2)}
+                        onChange={() => rankCandidate(candidate, index2)}
+                        disabled={isDisabled(candidate, index2)}
+                      />
+                    </div>
+                  </td>
+                ))}
               </tr>
             );
           })}
         </tbody>
       </table>
+      <div className="flex justify-end my-4">
+        <button
+          className="px-3 py-1 text-xl font-semibold text-white rounded-md shadow-md bg-midvale-red"
+          onClick={() => setRankedCandidates(new Array(5).fill(""))}
+        >
+          Reset
+        </button>
+      </div>
+      <div className="flex flex-col rounded-md p-4border-2 border-midvale-blue">
+        <h2 className="px-2 py-1 font-semibold bg-gray-200 border-2 rounded-md border-midvale-blue">
+          Results:
+        </h2>
+        <ul className="mt-4">
+          {rankedCandidates.map((name, index) => (
+            <li key={index} className="my-2 rounded-md">
+              <div className="flex">
+                <div className="w-10 px-1 mr-8 text-center bg-gray-200 border-2 rounded-md border-midvale-blue">
+                  {stringRanks[index]}
+                </div>
+                <div>{name}</div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
