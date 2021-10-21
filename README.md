@@ -1,7 +1,11 @@
-#Midvale City Promotion
+# Midvale City Promotion
 
 Project created by Stephen Horton
 Clone of this site https://rankthevotenyc.org/
+
+Hosted here: https://midvale-city.web.app/
+
+Will remain hosted for free for about a year before being taken down. Unless otherwise determined by Laura Magness.
 
 # Getting Started with Create React App
 
