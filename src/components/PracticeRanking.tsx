@@ -180,9 +180,6 @@ const PracticeRanking: FC = () => {
 				"You voted for multiple candidates in the same ranking"
 			);
 		}
-		if (temp.length !== 5) {
-			errors.push("You didn't use all your votes");
-		}
 		const temp2 = candidates.map((el) => el.votes);
 		for (let i = 0; i < temp.length; i++) {
 			if (temp2[i] > 1) {

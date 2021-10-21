@@ -9,7 +9,7 @@ const BottomBar = () => {
 			</h1>
 			<div className="text-center">
 				<p>
-					7505 Holden st Midvale, UT 84047 | Phone (801) 567-7200 |
+					7505 Holden St. Midvale, UT 84047 | Phone (801) 567-7200 |
 					Connecting People and Government
 				</p>
 			</div>
